@@ -1,6 +1,6 @@
 # what_currency_app
 
-A new Flutter project.
+Gelecek Hayalim projesi kapsamında bir finans uygulaması oluşturmaya başladım ve şu an geliştiriyorum.
 
 ## Getting Started
 
