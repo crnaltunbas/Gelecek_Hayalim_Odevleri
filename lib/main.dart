@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:what_currency_app/assets/colors.dart';
 
 void main() {
-  runApp(const WhatCurrencyApp());
+  runApp(const WhatCurrencyAppHomePage());
 }
 
-class WhatCurrencyApp extends StatelessWidget {
-  const WhatCurrencyApp({super.key});
+class WhatCurrencyAppHomePage extends StatefulWidget {
+  const WhatCurrencyAppHomePage({super.key});
+  @override
+  WhatCurrencyAppHomePageState createState() =>
+      WhatCurrencyAppHomePageState();
 
+}
+class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
+
+
+  @override
+  Widget build(BuildContext context) => throw UnimplementedError();
+}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +36,8 @@ class WhatCurrencyApp extends StatelessWidget {
                   "What Currency",
                   style: TextStyle(
                     fontSize: 20,
-                    color: Color(0xFF99DAFF), //Burada neden colors sınıfından ismi kabul ettmediğini anlayamadım.
+                    color: Color(
+                        0xFF99DAFF), //Burada neden colors sınıfından ismi kabul ettmediğini anlayamadım.
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.normal,
                   ),
@@ -36,8 +47,3 @@ class WhatCurrencyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-
-
-
