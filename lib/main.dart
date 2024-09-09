@@ -4,14 +4,12 @@ import 'package:what_currency_app/assets/pages/page_one.dart';
 import 'package:what_currency_app/assets/pages/page_two.dart';
 import 'package:what_currency_app/assets/pages/page_three.dart';
 
-
 void main() {
   runApp(const WhatCurrencyAppHomePage());
 }
 
 class WhatCurrencyApp extends StatelessWidget {
-    const WhatCurrencyApp({super.key});
-
+  const WhatCurrencyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +37,6 @@ enum WhatCurrencyPages {
 
 class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
   WhatCurrencyPages _selectedPage = WhatCurrencyPages.homePage;
-
 
   Widget _getPage(WhatCurrencyPages page) {
     switch (page) {
@@ -70,7 +67,8 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
               //flexibleSpace ile center widgetı sayesinde texti ortaladık padding sayesinde de aşağı indirdik.
               padding: EdgeInsets.only(top: 35.0),
               child: Center(
-                child: Text("What Currency App", // Burası dynamic yapılacak!!
+                child: Text(
+                  "What Currency App", // Burası dynamic yapılacak!!
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(0xFF99DAFF),
@@ -87,14 +85,15 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
           currentIndex: _selectedPage.index, //Enum indexini kullandık
           onTap: (int index) {
             setState(() {
-              _selectedPage = WhatCurrencyPages.values[index]; //Seçtiğimiz index ile enum indexi eşleştirmiş olduk
+              _selectedPage = WhatCurrencyPages.values[
+                  index]; //Seçtiğimiz index ile enum indexi eşleştirmiş olduk
             });
           },
           items: const [
             BottomNavigationBarItem(
-              backgroundColor: Color(0xFF061A40),
-              icon: (Icon(Icons.home, color: Color(0xFF99DAFF))),
-              label: 'Home Page'),
+                backgroundColor: Color(0xFF061A40),
+                icon: (Icon(Icons.home, color: Color(0xFF99DAFF))),
+                label: 'Home Page'),
             BottomNavigationBarItem(
                 backgroundColor: Color(0xFF061A40),
                 icon: (Icon(Icons.abc, color: Color(0xFF99DAFF))),
@@ -107,7 +106,6 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
                 backgroundColor: Color(0xFF061A40),
                 icon: (Icon(Icons.abc, color: Color(0xFF99DAFF))),
                 label: 'Page Three'),
-
           ],
         ),
       ),

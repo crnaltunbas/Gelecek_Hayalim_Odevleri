@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class PageTwo extends StatefulWidget {
 
+class PageTwo extends StatefulWidget {
   const PageTwo({super.key});
 
   @override
@@ -10,7 +10,8 @@ class PageTwo extends StatefulWidget {
 class _PageTwoState extends State<PageTwo> {
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(title: "PageTwo",
+    return MaterialApp(
+      title: "PageTwo",
       home: Scaffold(
         body: Center(
           child: Container(
