@@ -9,6 +9,15 @@ class PageThree extends StatefulWidget {
 class _PageThreeState extends State<PageThree> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  MaterialApp(title: "PageThree",
+      home: Scaffold(
+        body: Center(
+          child: Container(
+            color: Colors.white,
+            child: const Text("BURASI PAGETHREE"),
+          ),
+        ),
+      ),
+    );
   }
 }
