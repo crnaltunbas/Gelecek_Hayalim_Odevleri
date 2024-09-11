@@ -37,7 +37,6 @@ enum WhatCurrencyPages {
 
 class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
   WhatCurrencyPages _selectedPage = WhatCurrencyPages.homePage;
-
   Widget _getPage(WhatCurrencyPages page) {
     switch (page) {
       case WhatCurrencyPages.homePage:
@@ -112,3 +111,4 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
     );
   }
 }
+
