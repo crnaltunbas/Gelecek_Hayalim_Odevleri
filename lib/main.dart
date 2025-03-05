@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:what_currency_app/assets/colors.dart';
-import 'package:what_currency_app/assets/pages/page_one.dart';
-import 'package:what_currency_app/assets/pages/page_two.dart';
-import 'package:what_currency_app/assets/pages/page_three.dart';
+import 'package:what_currency_app/presentation/forex_page.dart';
+import 'package:what_currency_app/presentation/page_three.dart';
+import 'package:what_currency_app/presentation/page_two.dart';
 
 void main() {
   runApp(const WhatCurrencyAppHomePage());
@@ -42,7 +42,7 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
       case WhatCurrencyPages.homePage:
         return const WhatCurrencyApp(); // Bu ana sayfa olarak tanımlanacak
       case WhatCurrencyPages.pageOne:
-        return const PageOne();
+        return const ForexPage();
       case WhatCurrencyPages.pageTwo:
         return const PageTwo();
       case WhatCurrencyPages.pageThree:
@@ -70,8 +70,7 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
                   "What Currency App", // Burası dynamic yapılacak!!
                   style: TextStyle(
                     fontSize: 20,
-                    color: Color(0xFF99DAFF),
-                    //Burada neden colors sınıfından ismi kabul ettmediğini anlayamadım.
+                    color: WhatCurrencyAppColors.thirdColor,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.normal,
                   ),
@@ -95,7 +94,7 @@ class WhatCurrencyAppHomePageState extends State<WhatCurrencyAppHomePage> {
                 label: 'Home Page'),
             BottomNavigationBarItem(
                 backgroundColor: Color(0xFF061A40),
-                icon: (Icon(Icons.abc, color: Color(0xFF99DAFF))),
+                icon: (Icon(Icons.euro_symbol,color: Color(0xFF99DAFF),size: 10,)),
                 label: 'Page One'),
             BottomNavigationBarItem(
                 backgroundColor: Color(0xFF061A40),
